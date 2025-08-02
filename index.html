@@ -464,7 +464,95 @@
             font-size: 1rem;
         }
 
-        /* Contact Section */
+        /* FAQ Section */
+        .faq {
+            padding: 150px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .faq-container {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active {
+            border-color: rgba(78, 205, 196, 0.3);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.1);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: #4ecdc4;
+            transition: transform 0.3s ease;
+            min-width: 24px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 30px 25px 30px;
+        }
+
+        .faq-answer p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .faq-number {
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+        }
         .contact {
             padding: 150px 50px;
             text-align: center;
@@ -828,6 +916,7 @@
                 <ul class="nav-links">
                     <li><a href="#portfolio" data-translate="nav_portfolio">Portfolio</a></li>
                     <li><a href="#services" data-translate="nav_services">Leistungen</a></li>
+                    <li><a href="#faq" data-translate="nav_faq">FAQ</a></li>
                     <li><a href="#about" data-translate="nav_about">Über mich</a></li>
                     <li><a href="#contact" data-translate="nav_contact">Kontakt</a></li>
                 </ul>
@@ -876,38 +965,132 @@
         <div class="services-grid">
             <div class="service-card fade-in">
                 <div class="service-number">01</div>
-                <h3 class="service-title" data-translate="service1_title">Landing Pages</h3>
+                <h3 class="service-title" data-translate="service1_title">Express Website</h3>
                 <p class="service-description" data-translate="service1_desc">
-                    Hochkonvertierende Verkaufsseiten mit modernem Design und 
-                    optimaler Benutzererfahrung für maximale Conversion-Raten.
+                    Schnelle Lösung für Ihren Webauftritt. 1-2 Sektionen mit allen wichtigen 
+                    Funktionen. Inklusive Hosting & Domain für 1 Jahr.
                 </p>
                 <ul class="service-features">
                     <li data-translate="service_feature1">Responsive Design für alle Geräte</li>
-                    <li data-translate="service_feature2">SEO-Optimierung</li>
+                    <li data-translate="service_feature2">SEO-Basis inklusive</li>
                     <li data-translate="service_feature3">Kontaktformulare</li>
-                    <li data-translate="service_feature4">Analytics Integration</li>
+                    <li data-translate="service_feature4">Hosting & Domain (1 Jahr)</li>
                     <li data-translate="service_feature5">1 Monat kostenloser Support</li>
                 </ul>
-                <div class="service-price">€250</div>
+                <div class="service-price">€275</div>
                 <div class="service-price-note" data-translate="delivery_time">Fertig in 3-5 Tagen</div>
             </div>
 
             <div class="service-card fade-in">
                 <div class="service-number">02</div>
-                <h3 class="service-title" data-translate="service2_title">Express Websites</h3>
+                <h3 class="service-title" data-translate="service2_title">Onepager Komplett</h3>
                 <p class="service-description" data-translate="service2_desc">
-                    Schnelle Lösung für Ihren Webauftritt. Professionelle Website 
-                    in Rekordzeit mit allen wichtigen Funktionen.
+                    Vollständige Onepager-Website mit 3-5 Sektionen. Perfekt für 
+                    Unternehmen die professionell auftreten möchten.
                 </p>
                 <ul class="service-features">
-                    <li data-translate="express_feature1">Fertig in 24-48 Stunden</li>
-                    <li data-translate="express_feature2">Essenzielle Funktionen</li>
-                    <li data-translate="express_feature3">Mobile-optimiert</li>
-                    <li data-translate="express_feature4">Sofort einsatzbereit</li>
+                    <li data-translate="express_feature1">3-5 professionelle Sektionen</li>
+                    <li data-translate="express_feature2">Erweiterte SEO-Optimierung</li>
+                    <li data-translate="express_feature3">Premium Design</li>
+                    <li data-translate="express_feature4">Hosting & Domain (1 Jahr)</li>
                     <li data-translate="service_feature5">1 Monat kostenloser Support</li>
                 </ul>
-                <div class="service-price">€200</div>
-                <div class="service-price-note" data-translate="fastest_solution">Schnellste Lösung</div>
+                <div class="service-price">€375</div>
+                <div class="service-price-note" data-translate="fastest_solution">Komplett-Paket</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section" id="faq">
+        <h2 class="section-title fade-in" data-translate="faq_title">Häufig gestellte Fragen</h2>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <div class="faq-number">1</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q1">Was ist im Website-Erstellungspaket enthalten?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a1">Das Paket umfasst die Erstellung einer Onepager-Website (Express-Seite oder Onepager Komplett-Paket), responsives Design, Basis-SEO (strukturierte Texte, Meta-Tags), Domain-Registrierung und Hosting für 1 Jahr.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">2</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q2">Was ist SEO-Basis und warum ist es wichtig?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a2">SEO-Basis ist die grundlegende Suchmaschinenoptimierung, die hilft, die Sichtbarkeit der Website in Suchmaschinen zu verbessern, damit potenzielle Kunden Ihr Unternehmen leichter finden können.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">3</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q3">Was beinhaltet die Wartung für 29 € pro Monat?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a3">Die Wartung umfasst Text- und Bildaktualisierungen (bis zu 1–2 Änderungen pro Monat), technische Pflege, Überwachung der Website-Funktionalität und grundlegende Beratung.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">4</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q4">Können zusätzliche Leistungen bestellt werden?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a4">Ja, Sie können zusätzliche Funktionen, erweitertes Design oder Marketingdienstleistungen gegen Aufpreis bestellen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">5</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q5">Wie läuft der Website-Erstellungsprozess ab?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a5">Wir stimmen Struktur und Design ab, sammeln Materialien, erstellen die Website, testen und starten das Projekt.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">6</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q6">Wie lange dauert die Erstellung?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a6">In der Regel 3 bis 7 Werktage, abhängig von der Komplexität und Verfügbarkeit der Materialien.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">7</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q7">Was tun, wenn dringende Änderungen erforderlich sind?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a7">Im ersten Monat nach Fertigstellung der Website werden bis zu 1–2 kleine Änderungen oder die Behebung von Fehlern kostenlos durchgeführt. Danach erfolgen alle weiteren Änderungen und die Wartung nach Vereinbarung und Tarif.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-number">8</div>
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-translate="faq_q8">Wie erfolgt die Bezahlung und Verlängerung von Hosting/Domain?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-translate="faq_a8">Die Zahlung für die Website erfolgt vertraglich. Hosting und Domain sind im ersten Jahr enthalten. Ab dem 2. Jahr beträgt die jährliche Verlängerungsgebühr ca. 75 € (je nach Preisänderungen der Anbieter).</p>
+                </div>
             </div>
         </div>
     </section>
@@ -939,7 +1122,7 @@
                     <div class="stat-label" data-translate="stat_support">Tage Support</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">€200+</div>
+                    <div class="stat-number">€275+</div>
                     <div class="stat-label" data-translate="stat_price">Faire Preise</div>
                 </div>
             </div>
@@ -998,8 +1181,8 @@
                     <label for="websiteType" data-translate="form_website_type">Art der Website *</label>
                     <select id="websiteType" name="websiteType" required>
                         <option value="" data-translate="form_select">Bitte wählen...</option>
-                        <option value="landing" data-translate="form_option_landing">Landing Page (€250)</option>
-                        <option value="express" data-translate="form_option_express">Express Website (€200)</option>
+                        <option value="landing" data-translate="form_option_landing">Onepager Komplett (€375)</option>
+                        <option value="express" data-translate="form_option_express">Express Website (€275)</option>
                         <option value="custom" data-translate="form_option_custom">Individuell</option>
                     </select>
                 </div>
@@ -1028,6 +1211,7 @@
             de: {
                 nav_portfolio: "Portfolio",
                 nav_services: "Leistungen", 
+                nav_faq: "FAQ",
                 nav_about: "Über mich",
                 nav_contact: "Kontakt",
                 hero_title: "Webentwicklung",
@@ -1040,21 +1224,38 @@
                 portfolio_item3_title: "Corporate Website",
                 portfolio_item3_desc: "Professionelle Unternehmenswebsite mit Content Management System und SEO-Optimierung.",
                 services_title: "Meine Leistungen",
-                service1_title: "Landing Pages",
-                service1_desc: "Hochkonvertierende Verkaufsseiten mit modernem Design und optimaler Benutzererfahrung für maximale Conversion-Raten.",
-                service2_title: "Express Websites",
-                service2_desc: "Schnelle Lösung für Ihren Webauftritt. Professionelle Website in Rekordzeit mit allen wichtigen Funktionen.",
+                service1_title: "Express Website",
+                service1_desc: "Schnelle Lösung für Ihren Webauftritt. 1-2 Sektionen mit allen wichtigen Funktionen. Inklusive Hosting & Domain für 1 Jahr.",
+                service2_title: "Onepager Komplett",
+                service2_desc: "Vollständige Onepager-Website mit 3-5 Sektionen. Perfekt für Unternehmen die professionell auftreten möchten.",
                 service_feature1: "Responsive Design für alle Geräte",
-                service_feature2: "SEO-Optimierung", 
+                service_feature2: "SEO-Basis inklusive", 
                 service_feature3: "Kontaktformulare",
-                service_feature4: "Analytics Integration",
+                service_feature4: "Hosting & Domain (1 Jahr)",
                 service_feature5: "1 Monat kostenloser Support",
-                express_feature1: "Fertig in 24-48 Stunden",
-                express_feature2: "Essenzielle Funktionen",
-                express_feature3: "Mobile-optimiert",
-                express_feature4: "Sofort einsatzbereit",
+                express_feature1: "3-5 professionelle Sektionen",
+                express_feature2: "Erweiterte SEO-Optimierung",
+                express_feature3: "Premium Design",
+                express_feature4: "Hosting & Domain (1 Jahr)",
                 delivery_time: "Fertig in 3-5 Tagen",
-                fastest_solution: "Schnellste Lösung",
+                fastest_solution: "Komplett-Paket",
+                faq_title: "Häufig gestellte Fragen",
+                faq_q1: "Was ist im Website-Erstellungspaket enthalten?",
+                faq_a1: "Das Paket umfasst die Erstellung einer Onepager-Website (Express-Seite oder Onepager Komplett-Paket), responsives Design, Basis-SEO (strukturierte Texte, Meta-Tags), Domain-Registrierung und Hosting für 1 Jahr.",
+                faq_q2: "Was ist SEO-Basis und warum ist es wichtig?",
+                faq_a2: "SEO-Basis ist die grundlegende Suchmaschinenoptimierung, die hilft, die Sichtbarkeit der Website in Suchmaschinen zu verbessern, damit potenzielle Kunden Ihr Unternehmen leichter finden können.",
+                faq_q3: "Was beinhaltet die Wartung für 29 € pro Monat?",
+                faq_a3: "Die Wartung umfasst Text- und Bildaktualisierungen (bis zu 1–2 Änderungen pro Monat), technische Pflege, Überwachung der Website-Funktionalität und grundlegende Beratung.",
+                faq_q4: "Können zusätzliche Leistungen bestellt werden?",
+                faq_a4: "Ja, Sie können zusätzliche Funktionen, erweitertes Design oder Marketingdienstleistungen gegen Aufpreis bestellen.",
+                faq_q5: "Wie läuft der Website-Erstellungsprozess ab?",
+                faq_a5: "Wir stimmen Struktur und Design ab, sammeln Materialien, erstellen die Website, testen und starten das Projekt.",
+                faq_q6: "Wie lange dauert die Erstellung?",
+                faq_a6: "In der Regel 3 bis 7 Werktage, abhängig von der Komplexität und Verfügbarkeit der Materialien.",
+                faq_q7: "Was tun, wenn dringende Änderungen erforderlich sind?",
+                faq_a7: "Im ersten Monat nach Fertigstellung der Website werden bis zu 1–2 kleine Änderungen oder die Behebung von Fehlern kostenlos durchgeführt. Danach erfolgen alle weiteren Änderungen und die Wartung nach Vereinbarung und Tarif.",
+                faq_q8: "Wie erfolgt die Bezahlung und Verlängerung von Hosting/Domain?",
+                faq_a8: "Die Zahlung für die Website erfolgt vertraglich. Hosting und Domain sind im ersten Jahr enthalten. Ab dem 2. Jahr beträgt die jährliche Verlängerungsgebühr ca. 75 € (je nach Preisänderungen der Anbieter).",
                 about_title: "Über mich",
                 about_text1: "Ich erstelle moderne, professionelle Websites mit Fokus auf Performance und Benutzerfreundlichkeit. Mit jahrelanger Erfahrung in Webentwicklung und Design helfe ich Unternehmen dabei, online erfolgreich zu sein.",
                 about_text2: "Jedes Projekt wird individuell entwickelt und an Ihre spezifischen Anforderungen angepasst. Qualität und Kundenzufriedenheit stehen dabei immer im Vordergrund.",
@@ -1074,8 +1275,8 @@
                 form_name: "Ihr Name *", 
                 form_website_type: "Art der Website *",
                 form_select: "Bitte wählen...",
-                form_option_landing: "Landing Page (€250)",
-                form_option_express: "Express Website (€200)",
+                form_option_landing: "Onepager Komplett (€375)",
+                form_option_express: "Express Website (€275)",
                 form_option_custom: "Individuell",
                 form_description: "Beschreibung Ihres Projekts *",
                 form_description_placeholder: "Beschreiben Sie kurz Ihr Projekt und Ihre Anforderungen...",
@@ -1086,6 +1287,7 @@
             en: {
                 nav_portfolio: "Portfolio",
                 nav_services: "Services",
+                nav_faq: "FAQ",
                 nav_about: "About", 
                 nav_contact: "Contact",
                 hero_title: "Web Development",
@@ -1356,7 +1558,21 @@
             }, 500);
         }
 
-        // Handle form submission with real email integration
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
         function handleFormSubmission() {
             const form = document.getElementById('contactForm');
             const submitBtn = form.querySelector('.submit-btn');
