@@ -415,7 +415,8 @@
         /* About Section */
         .about {
             padding: 150px 50px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
             position: relative;
         }
 
@@ -829,31 +830,209 @@
             }
             
             .nav-links {
-                gap: 20px;
-                display: none;
+                gap: 15px;
+                font-size: 0.85rem;
             }
             
             .language-switcher {
                 order: -1;
+                gap: 8px;
             }
             
+            .lang-btn {
+                padding: 4px 8px;
+                font-size: 0.75rem;
+            }
+            
+            .portfolio,
             .services,
+            .faq,
             .about,
             .contact {
-                padding: 100px 20px;
+                padding: 80px 20px;
+            }
+            
+            .portfolio-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
             
             .service-card {
-                padding: 40px 30px;
+                padding: 30px 20px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
             
             .contact-info {
                 flex-direction: column;
-                gap: 30px;
+                gap: 25px;
+            }
+            
+            /* FAQ Mobile Styles */
+            .faq-question {
+                padding: 20px 15px;
+                font-size: 1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 15px;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 15px 20px 15px;
+            }
+            
+            .faq-number {
+                left: -8px;
+                top: -8px;
+                width: 25px;
+                height: 25px;
+                font-size: 0.7rem;
+            }
+            
+            .faq-icon {
+                font-size: 1.2rem;
             }
         }
 
         @media (max-width: 480px) {
+            .header {
+                padding: 12px 15px;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .language-switcher {
+                gap: 5px;
+            }
+            
+            .lang-btn {
+                padding: 3px 6px;
+                font-size: 0.7rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 50px;
+            }
+            
+            .portfolio,
+            .services,
+            .faq,
+            .about,
+            .contact {
+                padding: 60px 15px;
+            }
+            
+            .portfolio-item,
+            .service-card {
+                padding: 20px 15px;
+            }
+            
+            .service-number {
+                font-size: 3rem;
+            }
+            
+            .service-title {
+                font-size: 1.3rem;
+            }
+            
+            .service-description {
+                font-size: 0.95rem;
+            }
+            
+            .service-price {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .about-text {
+                font-size: 1.1rem;
+            }
+            
+            .about-text h3 {
+                font-size: 2rem;
+            }
+            
+            .contact-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-text {
+                font-size: 1.1rem;
+            }
+            
+            .email-link {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            
+            /* FAQ Mobile */
+            .faq-question {
+                padding: 15px 12px;
+                font-size: 0.95rem;
+            }
+            
+            .faq-answer {
+                padding: 0 12px;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 12px 15px 12px;
+            }
+            
+            .faq-answer p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            .faq-number {
+                left: -5px;
+                top: -5px;
+                width: 20px;
+                height: 20px;
+                font-size: 0.6rem;
+            }
+            
+            .faq-icon {
+                font-size: 1rem;
+            }
+            
+            /* Modal Mobile */
             .modal-content {
                 margin: 1% auto;
                 padding: 20px;
