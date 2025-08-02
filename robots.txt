@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Запрет индексации служебных файлов
+Disallow: /favicon.ico/
+Disallow: /assets/31611-387688517.mp4
+
+# Sitemap (будет добавлен позже)
+Sitemap: https://webdev-kiril.de/sitemap.xml
+
+# Время между запросами (рекомендуется)
+Crawl-delay: 1
