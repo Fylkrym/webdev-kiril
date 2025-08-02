@@ -3,7 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiril Huseinov - Professionelle Websites</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Kiril Huseinov - Professionelle Website Erstellung | webdev-kiril.de</title>
+    <meta name="description" content="Professionelle Website-Erstellung von Kiril Huseinov. Express-Websites ab €275, Onepager Komplett ab €375. Hosting & Domain inklusive. Jetzt anfragen!">
+    <meta name="keywords" content="Website erstellen, Webdesign, Landing Page, Onepager, Express Website, SEO, Hosting, Domain, Kiril Huseinov, webdev-kiril">
+    <meta name="author" content="Kiril Huseinov">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="German">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webdev-kiril.de/">
+    <meta property="og:title" content="Kiril Huseinov - Professionelle Website Erstellung">
+    <meta property="og:description" content="Express-Websites ab €275, Onepager Komplett ab €375. Hosting & Domain inklusive.">
+    <meta property="og:image" content="https://webdev-kiril.de/assets/og-image.jpg">
+    <meta property="og:site_name" content="webdev-kiril.de">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://webdev-kiril.de/">
+    <meta property="twitter:title" content="Kiril Huseinov - Professionelle Website Erstellung">
+    <meta property="twitter:description" content="Express-Websites ab €275, Onepager Komplett ab €375. Hosting & Domain inklusive.">
+    <meta property="twitter:image" content="https://webdev-kiril.de/assets/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://webdev-kiril.de/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kiril Huseinov",
+        "jobTitle": "Web Developer",
+        "url": "https://webdev-kiril.de",
+        "email": "kirillgusejnov41@gmail.com",
+        "telephone": "+49-160-6058170",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE"
+        },
+        "sameAs": [
+            "https://wa.me/491606058170"
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Express Website",
+                "description": "Schnelle Website-Lösung mit 1-2 Sektionen",
+                "price": "275",
+                "priceCurrency": "EUR"
+            },
+            {
+                "@type": "Offer", 
+                "name": "Onepager Komplett",
+                "description": "Vollständige Onepager-Website mit 3-5 Sektionen",
+                "price": "375",
+                "priceCurrency": "EUR"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/31611-387688517.mp4" as="video" type="video/mp4">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//wa.me">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -539,22 +617,9 @@
             font-size: 1rem;
         }
 
+        /* Убираем номера */
         .faq-number {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: white;
-            z-index: 10;
+            display: none;
         }
         .contact {
             padding: 150px 50px;
@@ -902,14 +967,6 @@
                 padding: 0 15px 20px 15px;
             }
             
-            .faq-number {
-                left: -8px;
-                top: -8px;
-                width: 25px;
-                height: 25px;
-                font-size: 0.7rem;
-            }
-            
             .faq-icon {
                 font-size: 1.2rem;
             }
@@ -1030,14 +1087,6 @@
                 line-height: 1.6;
             }
             
-            .faq-number {
-                left: -5px;
-                top: -5px;
-                width: 20px;
-                height: 20px;
-                font-size: 0.6rem;
-            }
-            
             .faq-icon {
                 font-size: 1rem;
             }
@@ -1092,37 +1141,39 @@
     <div class="page-loader" id="pageLoader"></div>
     
     <!-- Background Video for entire site -->
-    <video class="site-video-bg" autoplay muted loop>
+    <video class="site-video-bg" autoplay muted loop playsinline preload="metadata" aria-label="Background video">
         <source src="assets/31611-387688517.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+        Your browser does not support the video tag.
     </video>
     <div class="site-video-overlay"></div>
 
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Hauptnavigation">
             <div class="logo">Kiril Huseinov</div>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#portfolio" data-translate="nav_portfolio">Portfolio</a></li>
-                    <li><a href="#services" data-translate="nav_services">Leistungen</a></li>
-                    <li><a href="#faq" data-translate="nav_faq">FAQ</a></li>
-                    <li><a href="#about" data-translate="nav_about">Über mich</a></li>
-                    <li><a href="#contact" data-translate="nav_contact">Kontakt</a></li>
+                    <li><a href="#portfolio" data-translate="nav_portfolio" aria-label="Zum Portfolio">Portfolio</a></li>
+                    <li><a href="#services" data-translate="nav_services" aria-label="Zu den Leistungen">Leistungen</a></li>
+                    <li><a href="#faq" data-translate="nav_faq" aria-label="Zu den häufigen Fragen">FAQ</a></li>
+                    <li><a href="#about" data-translate="nav_about" aria-label="Über mich">Über mich</a></li>
+                    <li><a href="#contact" data-translate="nav_contact" aria-label="Zum Kontakt">Kontakt</a></li>
                 </ul>
-                <div class="language-switcher">
-                    <button class="lang-btn active" onclick="switchLanguage('de')">DE</button>
-                    <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="switchLanguage('ru')">RU</button>
+                <div class="language-switcher" role="group" aria-label="Sprache wählen">
+                    <button class="lang-btn active" onclick="switchLanguage('de')" aria-label="Deutsch">DE</button>
+                    <button class="lang-btn" onclick="switchLanguage('en')" aria-label="English">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('ru')" aria-label="Русский">RU</button>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="banner">
         <div class="hero-content">
-            <p class="hero-subtitle" data-translate="hero_title">Webentwicklung</p>
-            <a href="#portfolio" class="cta-button" data-translate="hero_cta">Portfolio ansehen</a>
+            <h1 class="hero-subtitle" data-translate="hero_title">Webentwicklung</h1>
+            <a href="#portfolio" class="cta-button" data-translate="hero_cta" aria-label="Portfolio ansehen">Portfolio ansehen</a>
         </div>
     </section>
 
@@ -1329,11 +1380,11 @@
             <div class="contact-info fade-in">
                 <div class="contact-item">
                     <h4>Email</h4>
-                    <p>kirillgusejnov41@gmail.com</p>
+                    <p><a href="mailto:kirillgusejnov41@gmail.com" style="color: inherit; text-decoration: none;">kirillgusejnov41@gmail.com</a></p>
                 </div>
                 <div class="contact-item">
                     <h4>WhatsApp</h4>
-                    <p><a href="https://wa.me/491606058170" class="whatsapp-link" target="_blank">+49 160 6058170</a></p>
+                    <p><a href="https://wa.me/491606058170" class="whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp kontaktieren">+49 160 6058170</a></p>
                 </div>
                 <div class="contact-item">
                     <h4 data-translate="contact_delivery">Lieferzeit</h4>
@@ -1344,31 +1395,31 @@
                     <p data-translate="contact_support_time">30 Tage inklusive</p>
                 </div>
             </div>
-            <button class="email-link fade-in" onclick="openModal()" data-translate="contact_cta">
+            <button class="email-link fade-in" onclick="openModal()" data-translate="contact_cta" aria-label="Projekt anfragen">
                 Projekt anfragen
             </button>
         </div>
     </section>
 
     <!-- Modal for Contact Form -->
-    <div id="contactModal" class="modal">
+    <div id="contactModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3 data-translate="modal_title">Projekt anfragen</h3>
-            <form id="contactForm">
+            <span class="close" onclick="closeModal()" aria-label="Modal schließen">&times;</span>
+            <h3 id="modal-title" data-translate="modal_title">Projekt anfragen</h3>
+            <form id="contactForm" novalidate>
                 <div class="form-group">
                     <label for="clientEmail" data-translate="form_email">Ihre E-Mail *</label>
-                    <input type="email" id="clientEmail" name="clientEmail" required>
+                    <input type="email" id="clientEmail" name="clientEmail" required aria-required="true" autocomplete="email">
                 </div>
                 
                 <div class="form-group">
                     <label for="clientName" data-translate="form_name">Ihr Name *</label>
-                    <input type="text" id="clientName" name="clientName" required>
+                    <input type="text" id="clientName" name="clientName" required aria-required="true" autocomplete="name">
                 </div>
                 
                 <div class="form-group">
                     <label for="websiteType" data-translate="form_website_type">Art der Website *</label>
-                    <select id="websiteType" name="websiteType" required>
+                    <select id="websiteType" name="websiteType" required aria-required="true">
                         <option value="" data-translate="form_select">Bitte wählen...</option>
                         <option value="landing" data-translate="form_option_landing">Onepager Komplett (€375)</option>
                         <option value="express" data-translate="form_option_express">Express Website (€275)</option>
@@ -1378,15 +1429,15 @@
                 
                 <div class="form-group">
                     <label for="projectDescription" data-translate="form_description">Beschreibung Ihres Projekts *</label>
-                    <textarea id="projectDescription" name="projectDescription" data-translate-placeholder="form_description_placeholder" placeholder="Beschreiben Sie kurz Ihr Projekt und Ihre Anforderungen..." required></textarea>
+                    <textarea id="projectDescription" name="projectDescription" data-translate-placeholder="form_description_placeholder" placeholder="Beschreiben Sie kurz Ihr Projekt und Ihre Anforderungen..." required aria-required="true"></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" aria-describedby="submit-status">
                     <span class="btn-text" data-translate="form_submit">Anfrage senden</span>
-                    <div class="loading-spinner"></div>
+                    <div class="loading-spinner" aria-hidden="true"></div>
                 </button>
                 
-                <div class="success-message" id="successMessage">
+                <div class="success-message" id="successMessage" role="status" aria-live="polite">
                     <span data-translate="form_success_title">✓ Anfrage erfolgreich gesendet!</span><br>
                     <span data-translate="form_success_text">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</span>
                 </div>
@@ -1633,6 +1684,9 @@
         function switchLanguage(lang) {
             currentLanguage = lang;
             
+            // Update HTML lang attribute for SEO
+            document.documentElement.lang = lang === 'de' ? 'de' : lang === 'en' ? 'en' : 'ru';
+            
             // Update active button
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
@@ -1644,6 +1698,22 @@
             
             // Save language preference
             localStorage.setItem('preferred-language', lang);
+            
+            // Update meta description for SEO
+            updateMetaDescription(lang);
+        }
+
+        // Update meta description based on language
+        function updateMetaDescription(lang) {
+            const metaDesc = document.querySelector('meta[name="description"]');
+            const descriptions = {
+                de: "Professionelle Website-Erstellung von Kiril Huseinov. Express-Websites ab €275, Onepager Komplett ab €375. Hosting & Domain inklusive. Jetzt anfragen!",
+                en: "Professional website creation by Kiril Huseinov. Express websites from €275, complete onepage from €375. Hosting & domain included. Contact now!",
+                ru: "Профессиональное создание сайтов от Кирилла Гусейнова. Экспресс сайты от €275, полные лендинги от €375. Хостинг и домен включены. Обращайтесь!"
+            };
+            if (metaDesc && descriptions[lang]) {
+                metaDesc.content = descriptions[lang];
+            }
         }
 
         // Update translations
@@ -1875,6 +1945,7 @@ Sprache der Anfrage: ${currentLanguage.toUpperCase()}
                 });
                 currentLanguage = savedLanguage;
                 updateTranslations();
+                updateMetaDescription(savedLanguage);
             }
             
             showPageLoader();
@@ -1882,6 +1953,19 @@ Sprache der Anfrage: ${currentLanguage.toUpperCase()}
             enhanceServiceCards();
             handleFormSubmission();
             animateOnScroll();
+            
+            // Lazy load video for better performance
+            const video = document.querySelector('.site-video-bg');
+            if (video && 'IntersectionObserver' in window) {
+                const videoObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            video.play();
+                        }
+                    });
+                });
+                videoObserver.observe(video);
+            }
             
             // Event listeners
             window.addEventListener('scroll', () => {
@@ -1894,6 +1978,15 @@ Sprache der Anfrage: ${currentLanguage.toUpperCase()}
                 updateParallax();
                 animateOnScroll();
             });
+            
+            // Add skip link for accessibility
+            const skipLink = document.createElement('a');
+            skipLink.href = '#portfolio';
+            skipLink.textContent = 'Zum Hauptinhalt springen';
+            skipLink.style.cssText = 'position:absolute;top:-40px;left:6px;background:#000;color:#fff;padding:8px;text-decoration:none;z-index:10000;transition:top 0.3s;';
+            skipLink.addEventListener('focus', () => skipLink.style.top = '6px');
+            skipLink.addEventListener('blur', () => skipLink.style.top = '-40px');
+            document.body.insertBefore(skipLink, document.body.firstChild);
         });
     </script>
 </body>
